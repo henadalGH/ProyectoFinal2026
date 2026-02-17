@@ -1,0 +1,33 @@
+package com.example.genesisclub.genesisClub.Modelo.Entidad;
+
+import com.example.genesisclub.genesisClub.Modelo.Enums.CargosEnum;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.Data;
+
+@Entity
+@Data
+@Table(name = "cargos", schema = "wmotorpro")
+public class CargosEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_cargo")
+    private Long id;
+
+
+    @Column(name = "cargo")
+    @Enumerated(EnumType.STRING)
+    private CargosEnum cargo;
+
+    @Column(name = "sueldo_base")
+    private Double sueldoBase;
+
+}

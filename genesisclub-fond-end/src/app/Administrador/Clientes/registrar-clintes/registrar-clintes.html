@@ -1,0 +1,43 @@
+<app-header-admin></app-header-admin>
+
+<h1>Registar un nuevo Cliente</h1>
+
+<div class="formuario">
+    <p>Complete los campos</p>
+    <form (ngSubmit)="crearUsuario()">
+        <div class="campo">
+            <label>Nombre:</label>
+            <input type="text" name="nombre" id="nombre" required [(ngModel)]="nombre" >
+        </div>
+
+        <div class="campo">
+            <label>Apellido:</label>
+            <input type="text" required [(ngModel)]="apellido" name="apellido">
+        </div>
+        <div class="campo">
+            <label>Correo electronico:</label>
+            <input type="email" name="email" id="email" required [(ngModel)]="email">
+        </div>
+        <div class="campo">
+            <label for="">Contraseña:</label>
+            <input type="password" required [(ngModel)]="password" name="password">
+        </div>
+        <div class="campo">
+            <label for="">Contacto:</label>
+            <input type="text" name="contacto" [(ngModel)]="contacto" required>
+        </div>
+        <div class="campo">
+            <label>Domicilio:</label>
+            <input type="text" name="direccion" [(ngModel)]="direccion" required>
+        </div>
+
+        
+
+        <div class="botones">
+            <button type="submit">Registrar</button>
+        </div>
+    </form>
+
+    <button [routerLink]="['/gestionCliente']">Cancelar</button>
+    
+</div>
