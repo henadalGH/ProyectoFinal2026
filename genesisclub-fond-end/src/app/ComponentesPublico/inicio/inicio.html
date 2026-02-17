@@ -1,53 +1,75 @@
+<!-- NAVBAR -->
 <header class="navbar">
-    <h2 class="logo">GenesisClub</h2>
+  <h2 class="logo">W Motor PRO</h2>
 
-    <div class="nav-actions">
-        <button class="btn-outline" [routerLink]="['/solicitud']">Solicitar ser socio</button>
-        <button class="btn-primary" [routerLink]="['/login']">Iniciar sesión</button>
-    </div>
+  <div class="nav-actions">
+    <button class="btn-outline">Solicitar turno</button>
+    <button class="btn-primary" [routerLink]="['/login']">Iniciar sesión</button>
+  </div>
 </header>
 
 
+<!-- HERO -->
 <section class="hero">
-    <h1>Gestión inteligente de socios y negocios</h1>
+  <div class="hero-content">
+    <h1>
+      Gestión inteligente de
+      <span>vehículos y servicios</span>
+    </h1>
+
     <p>
-        Administre socios, rubros y negocios desde una única plataforma
-        de forma simple, rápida y segura.
+      Consultá el estado de tu auto, historial de reparaciones y turnos online.
+      Todo en una sola plataforma simple, rápida y segura.
     </p>
 
     <div class="hero-buttons">
-        <button class="btn-primary">Comenzar</button>
-        <button class="btn-outline">Más información</button>
+      <button class="btn-primary" [routerLink]="['/login']">Comenzar</button>
+      <button class="btn-outline">Más información</button>
     </div>
+  </div>
 </section>
 
 
+<!-- FEATURES -->
 <section class="features">
 
-    <div class="card">
-        <h3>👥 Gestión de socios</h3>
-        <p>Administre altas, bajas, solicitudes y estados fácilmente.</p>
-    </div>
+  <div class="card">
+    <h3>🚗 Mis vehículos</h3>
+    <p>Registrá todos tus autos y consultá su información en cualquier momento.</p>
+  </div>
 
-    <div class="card">
-        <h3>💼 Negocios</h3>
-        <p>Registre y controle los negocios asociados al sistema.</p>
-    </div>
+  <div class="card">
+    <h3>🛠 Historial de servicios</h3>
+    <p>Visualizá reparaciones, mantenimientos y cambios realizados.</p>
+  </div>
 
-    <div class="card">
-        <h3>📊 Reportes</h3>
-        <p>Obtenga métricas y estadísticas en tiempo real.</p>
-    </div>
+  <div class="card">
+    <h3>📅 Turnos online</h3>
+    <p>Reservá citas con el taller sin llamadas ni esperas.</p>
+  </div>
 
-    <div class="card">
-        <h3>🔒 Seguridad</h3>
-        <p>Acceso por roles: usuarios, socios y administradores.</p>
-    </div>
+  <div class="card">
+    <h3>📋 Gestión administrativa</h3>
+    <p>Control de órdenes de trabajo, clientes, presupuestos y estados.</p>
+  </div>
 
 </section>
 
 
-<footer class="footer">
-    © 2026 GenesisClub — Sistema de Gestión
-</footer>
+<!-- HOW IT WORKS -->
+<section class="how">
+  <h2>¿Cómo funciona?</h2>
 
+  <div class="steps">
+    <div>1️⃣ Registrás tu vehículo</div>
+    <div>2️⃣ Solicitás turno</div>
+    <div>3️⃣ Seguís el estado online</div>
+    <div>4️⃣ Retirás tu auto listo</div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+  © 2026 W Motor PRO — Sistema de gestión de talleres mecánicos
+</footer>
