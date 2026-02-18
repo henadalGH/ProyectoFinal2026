@@ -1,0 +1,78 @@
+/* Fondo general y centrado */
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Contenedor principal */
+.container {
+    background: #ffffff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    width: 350px;
+}
+
+/* Titulo del formulario */
+.titulo h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #333;
+    text-align: center;
+}
+
+.titulo p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+/* Campos del formulario */
+.form .campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form .campo label {
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #555;
+}
+
+.form .campo input {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.form .campo input:focus {
+    border-color: #2575fc;
+    outline: none;
+    box-shadow: 0 0 5px rgba(37, 117, 252, 0.5);
+}
+
+/* Botón de registro */
+.form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #2575fc;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 10px;
+}
+
+.form button:hover {
+    background-color: #6a11cb;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
