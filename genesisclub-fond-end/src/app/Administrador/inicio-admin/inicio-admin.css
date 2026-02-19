@@ -1,0 +1,130 @@
+/* CONTENEDOR GENERAL */
+.admin-home {
+  padding: 30px;
+  background: #f4f6f9;
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+}
+
+
+/* BIENVENIDA */
+.welcome h1 {
+  margin-bottom: 5px;
+}
+
+.welcome p {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+
+/* CARDS MÉTRICAS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  margin-bottom: 35px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card .icon {
+  font-size: 28px;
+}
+
+.card h2 {
+  margin: 10px 0;
+}
+
+.card.money {
+  background: #e8f7ee;
+}
+
+
+/* ACCIONES */
+.quick-actions {
+  margin-bottom: 35px;
+}
+
+.actions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.actions-grid button {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.actions-grid button:hover {
+  background: #1e40af;
+}
+
+
+/* SECCIÓN INFERIOR */
+.bottom-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.panel {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+
+/* TABLA */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+
+/* ACTIVIDAD */
+.activity {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.activity li {
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .bottom-grid {
+    grid-template-columns: 1fr;
+  }
+}

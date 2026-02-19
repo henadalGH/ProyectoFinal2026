@@ -5,6 +5,8 @@ import { Registro } from './ComponentesPublico/registro/registro';
 import { InicioCliente } from './Clientes/inicio-cliente/inicio-cliente';
 import { InicioAdmin } from './Administrador/inicio-admin/inicio-admin';
 import { InicioEmpleado } from './Empleado/inicio-empleado/inicio-empleado';
+import { HeaderCliente } from './Clientes/header-cliente/header-cliente';
+import { HeaderAdmin } from './Administrador/header-admin/header-admin';
 
 
 export const routes: Routes = [
@@ -18,10 +20,11 @@ export const routes: Routes = [
 
     //rutas del cliente
     {path: "inicioCliente", component: InicioCliente},
-
+    {path: "headerCliente", component: HeaderCliente},
 
     //Rutas del adminsitrador
     {path: "inicioAdmin", component: InicioAdmin},
+    {path: "headerAdmin", component: HeaderAdmin},
 
 
     //

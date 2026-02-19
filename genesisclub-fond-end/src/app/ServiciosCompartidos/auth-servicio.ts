@@ -77,7 +77,7 @@ export class AuthServicio {
         break;
 
       case 'CLIENTE':
-        this.router.navigate(['/inicioJugador']);
+        this.router.navigate(['/inicioCliente']);
       break;
       default:
         this.router.navigate(['/inicio']);
