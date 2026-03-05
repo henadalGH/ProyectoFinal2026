@@ -45,6 +45,9 @@ SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
                             .requestMatchers("/auth/login").permitAll()
                             .requestMatchers("/auth/logout").permitAll()
                             .requestMatchers("/registro/nuevo").permitAll()
+
+                            //Rutas con permiso a rol admin
+                            .requestMatchers("/api/empleado/todos").hasRole("ADMIN")
                             .anyRequest().authenticated()
             )
 

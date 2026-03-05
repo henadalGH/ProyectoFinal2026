@@ -1,9 +1,15 @@
 package com.example.genesisclub.genesisClub.Modelo.DTO;
 
 import java.time.LocalDate;
-
 import com.example.genesisclub.genesisClub.Modelo.Enums.CargosEnum;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
 public class EmpleadoDTO {
 
     
@@ -16,9 +22,8 @@ public class EmpleadoDTO {
     private LocalDate fechaNacimiento;
     private CargosEnum cargo;
     private Double sueldo;
-    public String getNombre() {
-        return nombre;
-    }
+    
+    
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }

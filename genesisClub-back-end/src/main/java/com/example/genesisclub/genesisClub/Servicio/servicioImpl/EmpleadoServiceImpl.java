@@ -18,8 +18,22 @@ public class EmpleadoServiceImpl implements EmpleadoService{
     private EmpleadoRepository empleadoRepository;
 
     @Override
-    public List<EmpleadoEntity> getAllEmpleado() {
-        return empleadoRepository.findAll();
+    public List<EmpleadoDTO> getAllEmpleado() {
+        return empleadoRepository.findAll()
+        
+        .stream()
+            .map(emp -> new EmpleadoDTO(
+                    emp.getUsuario().getNombre(),
+                    emp.getUsuario().getApellido(),
+                    emp.getUsuario().getEmail(),
+                    emp.getUsuario().getContacto(),
+                    emp.getDni(),
+                    emp.getFechaIngreso(),
+                    emp.getFechaNacimiento(),
+                    emp.getCargo().getCargo(),
+                    emp.getCargo().getSueldoBase()
+            ))
+            .toList();
     }
 
     @Override

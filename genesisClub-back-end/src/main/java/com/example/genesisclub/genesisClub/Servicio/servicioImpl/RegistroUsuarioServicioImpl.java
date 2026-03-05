@@ -23,7 +23,7 @@ import com.example.genesisclub.genesisClub.Repositorio.EmpleadoRepository;
 import com.example.genesisclub.genesisClub.Repositorio.RolRepository;
 import com.example.genesisclub.genesisClub.Repositorio.UsuarioRepository;
 import com.example.genesisclub.genesisClub.Servicio.RegistroUsuarioServicio;
-
+ 
 import jakarta.transaction.Transactional;
 
 @Service
@@ -39,7 +39,7 @@ public class RegistroUsuarioServicioImpl implements RegistroUsuarioServicio {
     private EmpleadoRepository empleadoRepository;
 
     @Autowired
-    private CargoRepository cargoRepository;
+    private CargoRepository cargoRepository; 
 
     @Autowired
     private RolRepository rolRepository;
