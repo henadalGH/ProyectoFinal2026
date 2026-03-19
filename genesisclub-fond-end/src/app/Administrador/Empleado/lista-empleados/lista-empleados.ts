@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { EmpleadoServicio } from '../../ServiciosAdmin/empleado-servicio';
 import { HeaderAdmin } from "../../header-admin/header-admin";
 import { Router } from '@angular/router';
+import { EmpleadoServicio } from '../../ServicioAdmin/empleado-servicio';
 
 @Component({
   selector: 'app-lista-empleados',

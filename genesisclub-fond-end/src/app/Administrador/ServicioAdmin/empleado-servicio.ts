@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class EmpleadoServicio {
-
+  
   private apiUrl = 'http://localhost:8080/api/empleado/todos';
 
   constructor(private http: HttpClient) {}
@@ -31,7 +31,5 @@ export class EmpleadoServicio {
       });
       return this.http.get(`http://localhost:8080/api/empleado/${id}`, {headers});
   }
-
-
 
 }
