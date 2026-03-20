@@ -41,6 +41,10 @@ public class EmpleadoServiceImpl implements EmpleadoService{
     public EmpleadoDTO getEmpleadoProId(Long id) {
 
         try {
+
+            if (id == null) {
+                throw new IllegalArgumentException("El id no puede ser null");
+            }
             EmpleadoEntity empleado = empleadoRepository.getReferenceById(id);
 
             // acá recién puede explotar si no existe

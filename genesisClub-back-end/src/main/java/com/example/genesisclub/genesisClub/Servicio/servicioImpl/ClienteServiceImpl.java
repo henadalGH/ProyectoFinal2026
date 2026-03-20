@@ -22,9 +22,15 @@ public class ClienteServiceImpl implements ClienteService {
         return clienteRepository.findAll();
     }
 
+    
     @Override
     public ClienteDTO obtenerClientePorId(Long id) {
-        ClienteEntity cliente = clienteRepository.getReferenceById(id);
+        if (id == null) {
+        throw new IllegalArgumentException("El id no puede ser null");
+    }
+
+    ClienteEntity cliente = clienteRepository.findById(id)
+        .orElseThrow(() -> new RuntimeException("Cliente no encontrado"));
 
         ClienteDTO dto = new ClienteDTO();
 

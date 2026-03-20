@@ -28,6 +28,10 @@ public class ServicioServiceImpl implements ServicioService {
 
     @Override
     public ServiciosDTO ontenerSercicioPorId(Long id) {
+
+        if (id == null) {
+        throw new IllegalArgumentException("El id no puede ser null");
+    }
         
         ServicioEntity servicio = servicioRepository.getReferenceById(id);
 

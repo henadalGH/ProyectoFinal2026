@@ -26,7 +26,10 @@ public class RepuestoServiceImpl implements RepuestoService {
 
     @Override
     public RepuestoDTO getRepuestoPorId(Long id) {
-       
+
+        if (id == null) {
+        throw new IllegalArgumentException("El id no puede ser null");
+    }
         RepuestosEntity repuesto = repuestoRepository.getReferenceById(id);
 
         RepuestoDTO repuestoDTO = new RepuestoDTO();
