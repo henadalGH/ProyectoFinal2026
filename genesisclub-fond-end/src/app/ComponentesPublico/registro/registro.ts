@@ -21,13 +21,14 @@ export class Registro {
   apellido: string = '';
   email: string = '';
   password: string = '';
-  contacto: string = '';
   direccion: string = '';
+  codigoArea: string = '';
+  numeroCel: string = '';
   rol: string = 'CLIENTE';
 
 
   registrarCliente() {
-    return this.registroServicio.crearCliente(this.nombre, this.apellido, this.email, this.password, this.contacto, 
+    return this.registroServicio.crearCliente(this.nombre, this.apellido, this.email, this.password, this.codigoArea, this.numeroCel ,
       this.direccion, this.rol).subscribe(
         (Response)=>{
           this.router.navigate(['/inicio']);

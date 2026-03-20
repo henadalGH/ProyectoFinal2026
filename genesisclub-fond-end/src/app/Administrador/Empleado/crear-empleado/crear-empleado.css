@@ -1,0 +1,20 @@
+.campo{
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+input{
+    margin-left: 15px;
+}
+
+button{
+    margin-top: 15px;
+}
+
+select{
+    margin-left: 15px;
+}
+
+.contenedorNum{
+    display: flex;
+}

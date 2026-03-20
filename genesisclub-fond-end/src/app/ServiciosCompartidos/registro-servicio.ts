@@ -13,14 +13,15 @@ export class RegistroServicio {
 
 
   private urlRegistro= 'http://localhost:8080/registro/nuevo';
-
+  private urlRegistroEmpleado = 'http://localhost:8080/registro/nuevo';
 
    crearCliente(
     nombre: string,
     apellido: string,
     email: string,
     password: string,
-    contacto: string,
+    codigoArea: string,
+    numeroCel: string,
     direccion: string,
     rol: string
   ): Observable<any> {
@@ -30,12 +31,14 @@ export class RegistroServicio {
       apellido,
       email,
       password,
-      contacto,
+      codigoArea,
+      numeroCel,
       direccion,
       rol
     };
 
     return this.http.post<any>(this.urlRegistro, body); // ✅ RETURN + body directo
   }
+
 }
   

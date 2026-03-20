@@ -26,7 +26,8 @@ public class EmpleadoServiceImpl implements EmpleadoService{
                     emp.getUsuario().getNombre(),
                     emp.getUsuario().getApellido(),
                     emp.getUsuario().getEmail(),
-                    emp.getUsuario().getContacto(),
+                    emp.getUsuario().getCodigoArea(),
+                    emp.getUsuario().getNumeroCel(),
                     emp.getDni(),
                     emp.getFechaIngreso(),
                     emp.getFechaNacimiento(),
@@ -50,7 +51,8 @@ public class EmpleadoServiceImpl implements EmpleadoService{
             empleados.setApellido(empleado.getUsuario().getApellido());
             empleados.setEmail(empleado.getUsuario().getEmail());
             empleados.setDni(empleado.getDni());
-            empleados.setContacto(empleado.getUsuario().getContacto());
+            empleados.setCodigoArea(empleado.getUsuario().getCodigoArea());
+            empleados.setNumeroCel(empleado.getUsuario().getNumeroCel());
             empleados.setFechaIngreso(empleado.getFechaIngreso());
             empleados.setFechaNacimiento(empleado.getFechaNacimiento());
             empleados.setCargo(empleado.getCargo().getCargo());

@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderAdmin } from "../../header-admin/header-admin";
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { EmpleadoServicio } from '../../ServicioAdmin/empleado-servicio';
 
 @Component({
   selector: 'app-lista-empleados',
   standalone: true,
-  imports: [CommonModule, HeaderAdmin],
+  imports: [CommonModule, HeaderAdmin, RouterLink],
   templateUrl: './lista-empleados.html',
   styleUrls: ['./lista-empleados.css']
 })

@@ -45,8 +45,11 @@ public class UsuarioEntity implements UserDetails {
     @Column(name = "fecha_creacion")
     private LocalDate fechaCreacion;
 
-    @Column(name = "contacto")
-    private String contacto;
+    @Column(name = "codigo_area")
+    private String codigoArea;
+
+    @Column(name = "numero_cel")
+    private String numeroCel;
 
     @ManyToOne
     @JoinColumn(name = "id_rol")

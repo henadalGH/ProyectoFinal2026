@@ -1,0 +1,69 @@
+<app-header-admin></app-header-admin>
+
+<div class="titulo">
+    <h1>Registrar empleado</h1>
+    <p>Complete el formulario</p>
+</div>
+
+<Form class="formulario">
+
+    <div class="campo">
+        <label>Nombre:</label>
+        <input type="text" name="nombre" [(ngModel)]="nombre" required>
+    </div>
+
+    <div class="campo">
+        <label>Apellido:</label>
+        <input type="text" name="apelido" [(ngModel)]="apellido" required>
+    </div>
+
+    <div class="campo">
+        <label>Email: </label>
+        <input type="email" name="email" [(ngModel)]="email">
+    </div>
+
+    <div class="campo">
+        <label>Contraseña: </label>
+        <input type="text" name="password" [(ngModel)]="password">
+    </div>
+
+    <div class="campo">
+        <label>Contacto:</label>
+        <div class="contenedorNum">
+            <div class="numero">
+            <label>Codigo de area</label>
+            <input type="text" name="codigoArea" [(ngModel)]="codigoArea">
+        </div>
+        <div class="numero">
+            <label>Numero</label>
+            <input type="text" [(ngModel)]="numeroCel" name="numeroCel">
+        </div>
+        </div>
+        
+    </div>
+
+    <div class="campo">
+        <label>Dni:</label>
+        <input type="text" name="dni" [(ngModel)]="dni">
+    </div>
+
+    <div class="campo">
+        <label>Fecha nacimiento:</label>
+        <input type="date" name="fechaNacimiento" [(ngModel)]="fechaNacimiento">
+    </div>
+
+    <div class="campo">
+        <label>Cargo</label>
+        <select name="cargo" name="cargo" [(ngModel)]="cargo" >
+            <option value="AYUDANTE">Ayudante</option>
+            <option value="ENCARGADO">Encargado</option>
+            <option value="MECANICO">Mecanico</option>
+            <option value="JEFE_TALLER">Jefe taller</option>
+            <option value="ADMINISTRATIVO">Administrador</option>
+        </select>
+    </div>
+
+<button type="submit">Registrar</button>
+
+</Form>
+

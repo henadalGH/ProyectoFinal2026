@@ -27,9 +27,19 @@
             </div>
 
             <div class="campo">
-                <label>Contacto:</label>
-                <input type="text" name="contacto" placeholder="Teléfono o celular" [(ngModel)]="contacto" required>
-            </div>
+        <label>Contacto:</label>
+        <div class="contenedorNum">
+            <div class="numero">
+            <label>Codigo de area</label>
+            <input type="text" name="codigoArea" [(ngModel)]="codigoArea">
+        </div>
+        <div class="numero">
+            <label>Numero</label>
+            <input type="text" [(ngModel)]="numeroCel" name="numeroCel">
+        </div>
+        </div>
+        
+    </div>
 
             <div class="campo">
                 <label>Dirección:</label>

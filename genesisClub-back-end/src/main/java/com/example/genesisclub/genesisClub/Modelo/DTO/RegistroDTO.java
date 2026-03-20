@@ -15,7 +15,8 @@ public class RegistroDTO {
     private String email;
     private String password;
     private LocalDate fechaCreacion;
-    private String contacto;
+    private String codigoArea;
+    private String numeroCel;
 
     //para el cliente
     private String direccion;
