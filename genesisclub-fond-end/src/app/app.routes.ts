@@ -10,6 +10,7 @@ import { HeaderAdmin } from './Administrador/header-admin/header-admin';
 import { ListaEmpleados } from './Administrador/Empleado/lista-empleados/lista-empleados';
 import { VerEmpleado } from './Administrador/Empleado/ver-empleado/ver-empleado';
 import { CrearEmpleado } from './Administrador/Empleado/crear-empleado/crear-empleado';
+import { ListaCliente } from './Administrador/Cliente/lista-cliente/lista-cliente';
 
 
 export const routes: Routes = [
@@ -30,6 +31,7 @@ export const routes: Routes = [
     {path: "headerAdmin", component: HeaderAdmin},
     {path: "listaEmpleados", component: ListaEmpleados},
     {path: "crearEmpleado", component: CrearEmpleado},
+    {path: "listaCliente", component: ListaCliente},
 
 
     //Rutas empleado
