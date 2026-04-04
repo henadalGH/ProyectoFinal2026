@@ -15,16 +15,23 @@
     <table class="tabla-socios">
       <thead>
         <tr>
-          <th>#</th>
+          <th>Numero empleado</th>
           <th>Nombre</th>
           <th>Apellido</th>
           <th>Email</th>
           <th class="text-center">Acciones</th>
         </tr>
       </thead>
-class="btn-icon btn-view"
+      
+
       <tbody>
-        @for (emp of empleado; track emp.id) {
+
+        @if (cargando) {
+          <p>Cargando a los empleados</p>
+        } @else{
+          @for (emp of empleado; track $index) {
+
+          
           <tr>
             <td class="col-id">{{ $index + 1 }}</td>
             <td class="font-bold">{{ emp.nombre }}</td>
@@ -47,6 +54,7 @@ class="btn-icon btn-view"
               </div>
             </td>
           </tr>
+        }
         }
       </tbody>
     </table>

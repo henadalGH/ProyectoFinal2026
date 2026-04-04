@@ -1,12 +1,14 @@
 <app-header-admin></app-header-admin>
 
+
+<div class="contenedor">
+    
 <div class="titulo">
     <h1>Registrar empleado</h1>
     <p>Complete el formulario</p>
 </div>
 
-<Form class="formulario">
-
+<form class="formulario" (ngSubmit)="registrarEmpleado()">
     <div class="campo">
         <label>Nombre:</label>
         <input type="text" name="nombre" [(ngModel)]="nombre" required>
@@ -14,7 +16,7 @@
 
     <div class="campo">
         <label>Apellido:</label>
-        <input type="text" name="apelido" [(ngModel)]="apellido" required>
+        <input type="text" name="apellido" [(ngModel)]="apellido" required>
     </div>
 
     <div class="campo">
@@ -24,22 +26,21 @@
 
     <div class="campo">
         <label>Contraseña: </label>
-        <input type="text" name="password" [(ngModel)]="password">
+        <input type="password" name="password" [(ngModel)]="password">
     </div>
 
     <div class="campo">
         <label>Contacto:</label>
-        <div class="contenedorNum">
+            <div class="contenedorNum">
+                <div class="numero">
+                <label>Codigo de area</label>
+                <input type="text" class="codigoArea" name="codigoArea" [(ngModel)]="codigoArea">
+            </div>
             <div class="numero">
-            <label>Codigo de area</label>
-            <input type="text" name="codigoArea" [(ngModel)]="codigoArea">
+                <label>Numero</label>
+                <input type="text" [(ngModel)]="numeroCel" name="numeroCel">
+            </div>
         </div>
-        <div class="numero">
-            <label>Numero</label>
-            <input type="text" [(ngModel)]="numeroCel" name="numeroCel">
-        </div>
-        </div>
-        
     </div>
 
     <div class="campo">
@@ -54,7 +55,7 @@
 
     <div class="campo">
         <label>Cargo</label>
-        <select name="cargo" name="cargo" [(ngModel)]="cargo" >
+        <select name="cargo" [(ngModel)]="cargo" >
             <option value="AYUDANTE">Ayudante</option>
             <option value="ENCARGADO">Encargado</option>
             <option value="MECANICO">Mecanico</option>
@@ -65,5 +66,9 @@
 
 <button type="submit">Registrar</button>
 
-</Form>
+</form>
 
+<button onclick="history.back()">Cancelar</button>
+
+
+</div>

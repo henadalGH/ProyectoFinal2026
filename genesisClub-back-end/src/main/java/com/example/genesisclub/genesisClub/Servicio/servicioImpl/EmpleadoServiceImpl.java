@@ -23,6 +23,7 @@ public class EmpleadoServiceImpl implements EmpleadoService{
         
         .stream()
             .map(emp -> new EmpleadoDTO(
+                emp.getId(),
                     emp.getUsuario().getNombre(),
                     emp.getUsuario().getApellido(),
                     emp.getUsuario().getEmail(),

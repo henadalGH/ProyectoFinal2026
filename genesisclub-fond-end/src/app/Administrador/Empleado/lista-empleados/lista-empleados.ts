@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderAdmin } from "../../header-admin/header-admin";
 import { Router, RouterLink } from '@angular/router';
@@ -14,9 +14,12 @@ import { EmpleadoServicio } from '../../ServicioAdmin/empleado-servicio';
 export class ListaEmpleados implements OnInit {
 
   empleado: any[] = [];
+  cargando = true;
 
-  constructor(private empleadoServicio: EmpleadoServicio,
-    private router: Router
+  constructor(
+    private empleadoServicio: EmpleadoServicio,
+    private router: Router,
+    private cd: ChangeDetectorRef
   ) {}
 
   ngOnInit(): void {
@@ -26,14 +29,19 @@ export class ListaEmpleados implements OnInit {
   obtenerEmpleado(): void {
     this.empleadoServicio.obtenerEmpleado().subscribe({
       next: (respuesta: any) => {
-        console.log('DATA BACKEND =>', respuesta); 
-        this.empleado = respuesta; 
+        this.empleado = [...respuesta]; // 👈 importante
+        this.cargando = false;
+        this.cd.detectChanges(); // 👈 importante
+        console.log('llegó', respuesta);
       },
-      error: (err) => console.error(err)
+      error: () => {
+        this.cargando = false;
+        this.cd.detectChanges(); // 👈 también acá
+      }
     });
   }
 
   verEmplado(id: number) {
-    this.router.navigate(['/verEmpleado',id]);
+    this.router.navigate(['/verEmpleado', id]);
   }
 }

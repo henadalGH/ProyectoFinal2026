@@ -1,1 +1,49 @@
-<p>ver-empleado works!</p>
+<app-header-admin></app-header-admin>
+
+<div class="contenedor">
+
+    <div class="titulo">
+        <h1>Datos del empleado</h1>
+    </div>
+
+    @if (empleado) {
+
+    <div class="item">
+        <h3>Nombre:</h3>
+        <p>{{empleado.nombre}} {{empleado.apellido}}</p>
+    </div>
+
+    <div class="item">
+        <h3>Contacto</h3>
+        <p>{{empleado.codigoArea}} - {{empleado.numeroCel}}</p>
+    </div>
+
+    <div class="item">
+        <h3>Dni:</h3>
+        <p>{{empleado.dni}}</p>
+    </div>
+
+    <div class="item">
+        <h3>Fecha nacimiento:</h3>
+        <p>{{empleado.fechaNacimiento}}</p>
+    </div>
+
+    <div class="item">
+        <h3>Fecha de ingreso:</h3>
+        <p>{{empleado.fechaIngreso}}</p>
+    </div>
+
+    <div class="item">
+        <h3>Cargo:</h3>
+        <p>{{empleado.cargo}}</p>
+    </div>
+
+    <div class="botones">
+        <button class="btn-trabajo">Ver trabajos realizados</button>
+        <button class="btn-asig">Ver asignaciones</button>
+        <button class="btn-volver">Volver</button>
+    </div>
+
+    }
+
+</div>
