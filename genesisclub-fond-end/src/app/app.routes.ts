@@ -10,6 +10,6 @@ export const routes: Routes = [
     {path:"inicio", component: Inicio},
     {path:"login", component: Login},
     {path:'', redirectTo: '/inicio', pathMatch: 'full'},
-    {path:'registroClietne', component: RegistroCliente}
+    {path:'registroCliente', component: RegistroCliente}
 
 ];
