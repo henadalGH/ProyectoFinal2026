@@ -1,0 +1,26 @@
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #825e5e;
+}
+
+.campo{
+    margin-top: 15px;
+}
+
+input{
+    margin-left: 20px
+}
+
+.btn-regis{
+    padding: 10px;
+    margin-top: 15px;
+    
+}
+
+.btn-can{
+    padding: 10px;
+}

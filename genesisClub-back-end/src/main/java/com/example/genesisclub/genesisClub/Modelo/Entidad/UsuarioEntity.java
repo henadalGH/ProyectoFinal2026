@@ -42,11 +42,14 @@ public class UsuarioEntity implements UserDetails {
     @Column(name = "password")
     private String password;
 
+    @Column(name = "codigoArea")
+    private String codigoArea;
+
+    @Column(name = "numero")
+    private String numero;
+
     @Column(name = "fecha_creacion")
     private LocalDate fechaCreacion;
-
-    @Column(name = "contacto")
-    private String contacto;
 
     @ManyToOne
     @JoinColumn(name = "id_rol")
