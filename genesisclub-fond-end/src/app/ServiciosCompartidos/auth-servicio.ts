@@ -73,11 +73,11 @@ export class AuthServicio {
         this.router.navigate(['/inicioAdmin']);
         break;
       case 'EMPLEADO':
-        this.router.navigate(['/inicioSocio']);
+        this.router.navigate(['/inicioEmpleado']);
         break;
 
       case 'CLIENTE':
-        this.router.navigate(['/inicioJugador']);
+        this.router.navigate(['/inicioCliente']);
       break;
       default:
         this.router.navigate(['/inicio']);
