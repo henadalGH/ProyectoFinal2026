@@ -81,6 +81,8 @@ public class RegistroUsuarioServicioImpl implements RegistroUsuarioServicio {
         nuevoUsuario.setNombre(usuarioDTO.getNombre());
         nuevoUsuario.setApellido(usuarioDTO.getApellido());
         nuevoUsuario.setEmail(usuarioDTO.getEmail());
+        nuevoUsuario.setCodigoArea(usuarioDTO.getCodigoArea());
+        nuevoUsuario.setNumero(usuarioDTO.getNumero());
         nuevoUsuario.setFechaCreacion(LocalDate.now());
 
         // ✅ Encriptación SIMPLE (como vos querías)
