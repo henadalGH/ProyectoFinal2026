@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
 @RequestMapping("/registro")
-public class RegistroController {
+public class RegistroController { 
 
     @Autowired
     private RegistroUsuarioServicio registroService;

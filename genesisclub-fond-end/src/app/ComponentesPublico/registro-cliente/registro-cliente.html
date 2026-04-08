@@ -4,44 +4,44 @@
         <p>Complete el formulario</p>
     </div>
 
-    <form class="formulario">
+    <form class="formulario" (ngSubmit)="registroCliente()">
 
         <div class="campo">
             <label>Nombre: </label>
-            <input type="text">
+            <input type="text" name="nombre" [(ngModel)]="nombre">
         </div>
 
         <div class="campo">
             <label>Apellido: </label>
-            <input type="text">
+            <input type="text" name="apellido" [(ngModel)]="apellido">
         </div>
 
         <div class="campo">
             <label>Email:</label>
-            <input type="email">
+            <input type="email" name="email" [(ngModel)]="email">
         </div>
 
         <div class="campo">
             <label>Contraseña:</label>
-            <input type="password">
+            <input type="password" name="password" [(ngModel)]="password">
         </div>
 
         <div class="numero">
             <div class="campo">
             <label>Codigo area: </label>
-            <input type="text">
+            <input type="text" name="codigoArea" [(ngModel)]="codigoArea">
         </div>
 
         <div class="campo">
             <label>Numero:</label>
-            <input type="text">
+            <input type="text" name="numero" [(ngModel)]="numero">
         </div>
 
         </div>
 
         <div class="campo">
             <label>Dirección: </label>
-            <input type="text">
+            <input type="text" name="direccio" [(ngModel)]="direccion">
         </div>
 
         <button class="btn-regis">Registrarse</button>
