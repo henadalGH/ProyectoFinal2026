@@ -16,5 +16,13 @@ export class RegistroServicio {
   ){
     return this.http.post<any>(this.urlRegistro, {nombre, apellido, email, password, codigoArea, numero, direccion, rol})
   }
+
+  crearEmpleado(nombre: string, apellido: string, email: string, password: string, codigoArea: string, 
+    numero: string, rol: string, dni: string, fechaNacimiento: string, cargo: string
+  ){
+    return this.http.post<any>(this.urlRegistro, {nombre, apellido, email, password, codigoArea, numero, rol, 
+      dni, fechaNacimiento, cargo})
+  }
+
   
 }

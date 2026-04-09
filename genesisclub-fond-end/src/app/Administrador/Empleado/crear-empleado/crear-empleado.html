@@ -1,0 +1,77 @@
+<div class="contenedor">
+    <div class="titulo">
+        <h1>Registrar empleado</h1>
+        <p>Complete el formulario</p>
+    </div>
+
+    <form (ngSubmit)="creaEmpleado()">
+        
+        <div class="campo">
+            <label>Nombre:</label>
+            <input type="text" name="nombre" [(ngModel)]="nombre">
+        </div>
+
+        
+        <div class="campo">
+            <label>Apellido:</label>
+            <input type="text" name="apellido" [(ngModel)]="apellido">
+        </div>
+
+        <div class="campo">
+            <label>Email:</label>
+            <input type="text" name="email" [(ngModel)]="email">
+        </div>
+
+        
+        <div class="campo">
+            <label>Contraseña</label>
+            <input type="password" name="password" [(ngModel)]="password">
+        </div>
+
+        
+        <div class="campo">
+            <label>Codigo area:</label>
+            <input type="text" name="codigoArea" [(ngModel)]="codigoArea">
+        </div>
+
+        
+        <div class="campo">
+            <label>Numero:</label>
+            <input type="text" name="numero" [(ngModel)]="numero">
+        </div>
+
+        
+        <div class="campo">
+            <label>Dni:</label>
+            <input type="text" name="dni" [(ngModel)]="dni">
+        </div>
+
+        
+        <div class="campo">
+            <label>Fecha nacimiento:</label>
+            <input type="date" name="fechaNacimiento" [(ngModel)]="fechaNacimiento">
+        </div>
+
+        
+        <div class="campo">
+            <label>Cargo:</label>
+            <select name="cargo" [(ngModel)]="cargo">
+                <option value="AYUDANTE">Ayudante</option>
+                <option value="MECANICO">Mecanico</option>
+                <option value="JEFE_TALLER">Jefe taller</option>
+                <option value="ENCARGADO">Encargado</option>
+                <option value="ADMINISTRATIVO">Administrativo</option>
+            </select>
+        </div>
+
+        <div class="btn-reg">
+            <button>Agragar</button>
+        </div>
+
+    </form>
+
+    <div class="btn-reg">
+        <button>Cancelar</button>
+    </div>
+
+</div>

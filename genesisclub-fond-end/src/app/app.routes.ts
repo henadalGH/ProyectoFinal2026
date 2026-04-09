@@ -5,6 +5,9 @@ import { RegistroCliente } from './ComponentesPublico/registro-cliente/registro-
 import { InicioCliente } from './Cliente/inicio-cliente/inicio-cliente';
 import { InicioAdmin } from './Administrador/inicio-admin/inicio-admin';
 import { InicioEmpleado } from './Empleado/inicio-empleado/inicio-empleado';
+import { HeaderAdmin } from './Administrador/header-admin/header-admin';
+import { ListaEmpleado } from './Administrador/Empleado/lista-empleado/lista-empleado';
+import { CrearEmpleado } from './Administrador/Empleado/crear-empleado/crear-empleado';
 
 
 export const routes: Routes = [
@@ -20,6 +23,9 @@ export const routes: Routes = [
 
     //Rutas Admin
     {path: 'inicioAdmin', component: InicioAdmin},
+    {path: 'headerAdmin', component: HeaderAdmin},
+    {path: 'listaEmpleado', component: ListaEmpleado},
+    {path:'crearEmpleado', component: CrearEmpleado },
 
     //Ruta Empleado
     {path: 'inicioEmpleado', component: InicioEmpleado}
