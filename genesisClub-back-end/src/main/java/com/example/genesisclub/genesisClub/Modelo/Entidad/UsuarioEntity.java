@@ -51,6 +51,9 @@ public class UsuarioEntity implements UserDetails {
     @Column(name = "fecha_creacion")
     private LocalDate fechaCreacion;
 
+    @Column(name = "activo", nullable = false)
+    private boolean activo = true;
+
     @ManyToOne
     @JoinColumn(name = "id_rol")
     private RolEntity rol;

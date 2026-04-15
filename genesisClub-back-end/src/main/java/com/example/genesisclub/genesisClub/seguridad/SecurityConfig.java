@@ -32,7 +32,7 @@ public class SecurityConfig {
 
     @Bean
 SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-
+ 
     return http
             .cors(cors -> {}) // 🔥 HABILITA CORS (OBLIGATORIO)
             .csrf(csrf -> csrf.disable())
@@ -45,6 +45,12 @@ SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
                             .requestMatchers("/auth/login").permitAll()
                             .requestMatchers("/auth/logout").permitAll()
                             .requestMatchers("/registro/nuevo").permitAll()
+
+                        //rutas administrativas
+                            .requestMatchers("/empleado/**").permitAll()
+
+
+
                             .anyRequest().authenticated()
             )
 
